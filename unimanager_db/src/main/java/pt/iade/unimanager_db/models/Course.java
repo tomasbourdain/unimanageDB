@@ -18,12 +18,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Course {
     @Id @GeneratedValue
         (strategy = GenerationType.IDENTITY)
-@Column(name="cur_id")
-private int id;
-@Column(name="cur_nome")
-private String name;
-@OneToMany @JoinColumn(name=
-"pla_cur_id")
+@Column(name="cur_id")private int id;
+@Column(name="cur_nome")private String name;
+@OneToMany @JoinColumn(name="pla_cur_id")
 @JsonIgnoreProperties("course")
 private List<Plan> plans;
 public Course(int id,String name) {
