@@ -26,6 +26,18 @@ private String name;
 "pla_cur_id")
 @JsonIgnoreProperties("course")
 private List<Plan> plans;
-public Course() {}
-// other constructors getters and setters
+public Course(int id,String name) {
+    this.id=id;
+    this.name=name;
+    }
+    public int getId(){
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
+    public String setName(String name){ 
+        return this.name = name;
+    }
+
 }
